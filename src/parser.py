@@ -16,8 +16,20 @@ def extract_args():
     return arguments.format, arguments.files
 
 
+def validate_args(files):
+    # Checks if any file doesn't exist and terminate!!
+    errors = []
+    for file in files:
+        if not os.path.exists(file):
+            errors.append(f"error: The file {file} doesn't exist")
+    if len(errors) > 0:
+        print(*errors)
+        sys.exit(1)
+
+
 def main():
     format, files = extract_args()
+    validate_args(files)
     # Validate these files
     # Parse each file
     print(format, files)
