@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Transaction>
+    <Date>2021-12-07</Date>
+    <Customer id="ID1011200">
+        <Name>Shirish Suchak</Name>
+        <Address>1429  Joyce Street</Address>
+        <Phone>252-414-7396</Phone>
+        <Units>
+            <Vehicle id="V1824">
+                <Make>Honda</Make>
+                <VinNumber>WDBFA63E7RF125264</VinNumber>
+            </Vehicle>
+        </Units>
+    </Customer>
+</Transaction>
+ 
+
+

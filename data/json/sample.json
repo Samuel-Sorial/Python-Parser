@@ -1,0 +1,24 @@
+{
+   "file_name":"xml/customer2.xml",
+   "transaction":{
+      "date":"2020-10-15",
+      "customer":{
+         "id":"ID1011601",
+         "name":"Aleena Chan",
+         "address":"3344 Joy Lane",
+         "phone":"818-537-1995"
+      },
+      "vehicles":[
+         {
+            "id":"V1000",
+            "make":"Nissan",
+            "vin_number":"JA32V6FV2DU023115"
+         },
+         {
+            "id":"V1001",
+            "make":"Toyota",
+            "vin_number":"1FUJGLDR2DLB61105"
+         }
+      ]
+   }
+}

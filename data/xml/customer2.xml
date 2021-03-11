@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Transaction>
+    <Date>2020-10-15</Date>
+    <Customer id="ID1011601">
+        <Name>Aleena Chan</Name>
+        <Address>3344 Joy Lane</Address>
+        <Phone>818-537-1995</Phone>
+        <Units>
+            <Vehicle id="V1000">
+                <Make>Nissan</Make>
+                <VinNumber>JA32V6FV2DU023115</VinNumber>
+            </Vehicle>
+            <Vehicle id="V1001">
+                <Make>Toyota</Make>
+                <VinNumber>1FUJGLDR2DLB61105</VinNumber>
+            </Vehicle>
+        </Units>
+    </Customer>
+</Transaction>
