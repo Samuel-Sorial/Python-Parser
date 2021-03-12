@@ -7,6 +7,7 @@ import sys
 
 
 def convert_to_json_factory(format, file):
+    # Precondition: file already exists, file is in the given format
     # Instaniate the correct parser
     if format == "xml":
         file_name = get_file_name_from_path(file)
