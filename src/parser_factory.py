@@ -36,7 +36,7 @@ class XMLToJson:
 
         if tree.text.strip():
             text = tree.text.strip()
-            xml_dict[tree.tag] = text
+            xml_dict[tag] = text
 
         return xml_dict
 
