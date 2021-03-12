@@ -27,7 +27,7 @@ def extract_args():
 
 
 def validate_file(file, format):
-    # if any file doesn't exist or is not with given format terminate!!
+    # Check if the file doesn't exist or not with the given format!!
     format_len = len(format)
     if not os.path.exists(file):
         file_without_path = get_file_name_from_path(file)
