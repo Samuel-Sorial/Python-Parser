@@ -26,24 +26,18 @@ def extract_args():
     return arguments.format, arguments.files
 
 
-def validate_args(format, files):
+def validate_file(file, format):
     # if any file doesn't exist or is not with given format terminate!!
-    errors = []
     format_len = len(format)
-    for file in files:
-        if not os.path.exists(file):
-            file_without_path = get_file_name_from_path(file)
-            errors.append(f"error: The file {file_without_path} doesn't exist")
-            continue
+    if not os.path.exists(file):
+        file_without_path = get_file_name_from_path(file)
+        raise FileNotFoundError(
+            f"error: The file {file_without_path} doesn't exist!!")
 
-        if file[-format_len:] != format:
-            file_without_path = get_file_name_from_path(file)
-            errors.append(
-                f"error: The file {file_without_path} is not a {format} file!!")
-
-    if len(errors) > 0:
-        print(*errors)
-        sys.exit(1)
+    if file[-format_len:] != format:
+        file_without_path = get_file_name_from_path(file)
+        raise ValueError(
+            f"error: The file {file_without_path} is not a {format} file!!")
 
 
 def get_file_name_without_extension(file_name):

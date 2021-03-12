@@ -1,15 +1,22 @@
 from parsers.parser_factory import convert_to_json_factory
-from parsers.utils import (extract_args, validate_args,
+from parsers.utils import (extract_args, validate_file,
                            get_file_name_without_extension)
 
 
 def main():
     format, files = extract_args()
-    validate_args(format, files)
+    valid_files = []
     for file in files:
         try:
+            validate_file(file, format)
+            valid_files.append(file)
+        except Exception as error:
+            print(error)
+            continue
+    for file in valid_files:
+        try:
             to_json_parser = convert_to_json_factory(format, file)
-        except ValueError as error:
+        except Exception as error:
             print(error)
             continue
 
