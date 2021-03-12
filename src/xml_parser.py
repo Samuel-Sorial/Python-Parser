@@ -1,5 +1,4 @@
 from collections import defaultdict
-import xml.etree.ElementTree as ET
 
 
 class XMLParser:
