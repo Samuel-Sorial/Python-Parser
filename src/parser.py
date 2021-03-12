@@ -1,6 +1,7 @@
 import argparse
 import sys
 import os
+from parser_factory import get_parser
 
 
 def extract_args():
@@ -36,8 +37,10 @@ def validate_args(format, files):
 def main():
     format, files = extract_args()
     validate_args(format, files)
-    # Validate these files
     # Parse each file
+    for file in files:
+        parser = get_parser(format, file)
+        parser.parse()
     print(format, files)
 
 
