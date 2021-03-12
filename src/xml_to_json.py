@@ -3,8 +3,9 @@ import xml.etree.ElementTree as ET
 
 
 class XMLToJson:
-    def __init__(self, file):
-        self.file = file
+    def __init__(self, xml_tree, heading):
+        self.__xml_tree = xml_tree
+        self.__heading = heading
 
     def __append_to_neighbours(self, neighbours_dict, member_dict):
         for key, value in member_dict.items():
@@ -38,7 +39,8 @@ class XMLToJson:
         return xml_dict
 
     def parse(self):
-        root = ET.parse(self.file).getroot()
-        xml_tree = self.__convert_tree_to_dict(root)
-        xml_tree["file_name"] = f"xml/{self.file}"
-        return xml_tree
+        root = self.__xml_tree.getroot()
+        xml_dict = self.__convert_tree_to_dict(root)
+        xml_dict["file_name"] = f"xml/{self.__heading}"
+        print(xml_dict)
+        return xml_dict
