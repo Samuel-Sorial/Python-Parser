@@ -3,7 +3,7 @@ import unittest
 import xml.etree.ElementTree as ET
 
 
-class TestParser(unittest.TestCase):
+class TestXMLParser(unittest.TestCase):
     def test_source_name_with_empty(self):
         xml_tree = ET.fromstring(
             '<?xml version="1.0" encoding="UTF-8"?><Transaction> </Transaction>')

@@ -41,7 +41,6 @@ def main():
     for file in files:
         parser = convert_to_json_factory(format, file)
         parser.parse()
-    print(format, files)
 
 
 if __name__ == "__main__":

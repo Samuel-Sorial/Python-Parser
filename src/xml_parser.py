@@ -41,5 +41,4 @@ class XMLParser:
     def parse(self):
         xml_dict = self.__convert_tree_to_dict(self.__xml_root)
         xml_dict["file_name"] = f"xml/{self.__heading}"
-        print(xml_dict)
         return xml_dict
