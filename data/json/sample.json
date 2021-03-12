@@ -12,12 +12,12 @@
       {
         "id": "V1000",
         "make": "Nissan",
-        "vinnumber": "JA32V6FV2DU023115"
+        "vin_number": "JA32V6FV2DU023115"
       },
       {
         "id": "V1001",
         "make": "Toyota",
-        "vinnumber": "1FUJGLDR2DLB61105"
+        "vin_number": "1FUJGLDR2DLB61105"
       }
     ]
   }
