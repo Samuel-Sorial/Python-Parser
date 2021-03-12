@@ -41,3 +41,10 @@ def validate_args(format, files):
     if len(errors) > 0:
         print(*errors)
         sys.exit(1)
+
+
+def get_file_name_without_extension(file_name):
+    # Returns file name without the .extension
+    # file.xml -> file
+    file_without_path = file_name[file_name.rfind('/') + 1:]
+    return file_without_path[: file_without_path.find('.')]
