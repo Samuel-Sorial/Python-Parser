@@ -32,11 +32,14 @@ def validate_args(format, files):
     format_len = len(format)
     for file in files:
         if not os.path.exists(file):
-            errors.append(f"error: The file {file} doesn't exist")
+            file_without_path = get_file_name_from_path(file)
+            errors.append(f"error: The file {file_without_path} doesn't exist")
             continue
 
         if file[-format_len:] != format:
-            errors.append(f"error: The file {file} is not a {format} file!!")
+            file_without_path = get_file_name_from_path(file)
+            errors.append(
+                f"error: The file {file_without_path} is not a {format} file!!")
 
     if len(errors) > 0:
         print(*errors)
