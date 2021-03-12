@@ -1,4 +1,5 @@
 from collections import defaultdict
+from utils import pascal_to_snake_case
 
 
 class XMLParser:
@@ -9,7 +10,7 @@ class XMLParser:
 
     def __append_to_neighbours(self, neighbours_dict, member_dict):
         for key, value in member_dict.items():
-            neighbours_dict[key.lower()].append(value)
+            neighbours_dict[pascal_to_snake_case(key)].append(value)
 
     def __flatten_children(self, child_dict, parent_dict):
         for key, value in child_dict.items():
@@ -17,7 +18,7 @@ class XMLParser:
 
     def __add_attributes(self, tree_dict, tree):
         for key, value in tree.attrib.items():
-            tree_dict[key.lower()] = value
+            tree_dict[pascal_to_snake_case(key)] = value
 
     def __convert_tree_to_dict(self, tree):
         # Parse XML tree to dict[string : dict || list]
@@ -27,7 +28,7 @@ class XMLParser:
             current_child_dict = self.__convert_tree_to_dict(child)
             self.__append_to_neighbours(children_dect, current_child_dict)
 
-        tag = tree.tag.lower()
+        tag = pascal_to_snake_case(tree.tag)
         xml_dict = {tag: {}}
         self.__flatten_children(children_dect, xml_dict[tag])
         self.__add_attributes(xml_dict[tag], tree)
@@ -35,7 +36,6 @@ class XMLParser:
         if tree.text.strip():
             text = tree.text.strip()
             xml_dict[tag] = text
-
         return xml_dict
 
     def parse(self):

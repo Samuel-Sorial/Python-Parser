@@ -1,5 +1,8 @@
 import re
 
+
+# Compile the pattern to improve performance
+# Inspired by: https://stackoverflow.com/a/1176023/13089670
 pattern = re.compile(r'(?<!^)(?=[A-Z])')
 
 
