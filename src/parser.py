@@ -1,7 +1,7 @@
 import argparse
 import sys
 import os
-from parser_factory import get_parser
+from parser_factory import convert_to_json_factory
 
 
 def extract_args():
@@ -39,7 +39,7 @@ def main():
     validate_args(format, files)
     # Parse each file
     for file in files:
-        parser = get_parser(format, file)
+        parser = convert_to_json_factory(format, file)
         parser.parse()
     print(format, files)
 
