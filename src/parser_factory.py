@@ -1,8 +1,5 @@
 from collections import defaultdict
 import xml.etree.ElementTree as ET
-import pprint
-
-pp = pprint.PrettyPrinter(width=41, compact=True)
 
 
 class XMLToJson:
@@ -42,7 +39,9 @@ class XMLToJson:
 
     def parse(self):
         root = ET.parse(self.file).getroot()
-        pp.pprint(self.__convert_tree_to_dict(root))
+        xml_tree = self.__convert_tree_to_dict(root)
+        xml_tree["file_name"] = f"xml/{self.file}"
+        return xml_tree
 
 
 def get_parser(format, file):
