@@ -1,0 +1,19 @@
+{
+  "transaction": {
+    "date": "2021-12-07",
+    "customer": {
+      "name": "Shirish Suchak",
+      "address": "1429  Joyce Street",
+      "phone": "252-414-7396",
+      "units": {
+        "vehicle": {
+          "make": "Honda",
+          "vin_number": "WDBFA63E7RF125264",
+          "id": "V1824"
+        }
+      },
+      "id": "ID1011200"
+    }
+  },
+  "file_name": "xml/customer1.xml"
+}

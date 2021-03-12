@@ -1,5 +1,6 @@
 from collections import defaultdict
 from utils import pascal_to_snake_case
+import json
 
 
 class XMLParser:
@@ -41,3 +42,8 @@ class XMLParser:
         xml_dict = self.__convert_tree_to_dict(self.__xml_root)
         xml_dict["file_name"] = f"xml/{self.__heading}"
         return xml_dict
+
+    def write_to_file(self, file_name):
+        parsed_dict = self.parse()
+        with open(file_name, "w") as json_file:
+            json.dump(parsed_dict, json_file)
