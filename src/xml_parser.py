@@ -5,8 +5,7 @@ from utils import pascal_to_snake_case
 class XMLParser:
     def __init__(self, xml_root, heading):
         self.__xml_root = xml_root
-        file_name = heading[heading.rfind('/')+1:]
-        self.__heading = file_name
+        self.__heading = heading
 
     def __append_to_neighbours(self, neighbours_dict, member_dict):
         for key, value in member_dict.items():

@@ -1,4 +1,4 @@
-from src.utils import pascal_to_snake_case, get_file_name_without_extension
+from src.utils import pascal_to_snake_case, get_file_name_without_extension, get_file_name_from_path
 import unittest
 
 
@@ -12,6 +12,19 @@ class PascalToSnakeCaseTest(unittest.TestCase):
         snake = pascal_to_snake_case(" SamuelSorial ")
 
         self.assertEqual(snake, "samuel_sorial")
+
+
+class GetFileNameFromPath(unittest.TestCase):
+    def test_relative_path(self):
+        file_from_relative = get_file_name_from_path("./data/xml/samuel.xml")
+
+        self.assertEqual(file_from_relative, "samuel.xml")
+
+    def test_absolute_path(self):
+        file_from_abs = get_file_name_from_path(
+            "/home/samuel/Desktop/task/parsing_result/sample.json")
+
+        self.assertEqual(file_from_abs, "sample.json")
 
 
 class GetFileNameWithoutExtension(unittest.TestCase):
