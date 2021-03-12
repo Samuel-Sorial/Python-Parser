@@ -2,7 +2,7 @@ from collections import defaultdict
 import xml.etree.ElementTree as ET
 
 
-class XMLToJson:
+class XMLParser:
     def __init__(self, xml_tree, heading):
         self.__xml_tree = xml_tree
         self.__heading = heading
