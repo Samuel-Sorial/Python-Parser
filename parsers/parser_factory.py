@@ -1,6 +1,6 @@
-from xml_parser import XMLParser
-from csv_parser import CSVParser
-from utils import get_file_name_from_path
+from .xml_parser import XMLParser
+from .csv_parser import CSVParser
+from .utils import get_file_name_from_path
 import xml.etree.ElementTree as ET
 import csv
 

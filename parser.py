@@ -1,5 +1,6 @@
-from parser_factory import convert_to_json_factory
-from utils import extract_args, validate_args, get_file_name_without_extension
+from parsers.parser_factory import convert_to_json_factory
+from parsers.utils import (extract_args, validate_args,
+                           get_file_name_without_extension)
 
 
 def main():

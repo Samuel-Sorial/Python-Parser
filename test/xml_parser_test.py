@@ -1,4 +1,4 @@
-from src.xml_parser import XMLParser
+from parsers.xml_parser import XMLParser
 import unittest
 import xml.etree.ElementTree as ET
 

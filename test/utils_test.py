@@ -1,4 +1,6 @@
-from src.utils import pascal_to_snake_case, get_file_name_without_extension, get_file_name_from_path
+from parsers.utils import (
+    pascal_to_snake_case, get_file_name_without_extension,
+    get_file_name_from_path)
 import unittest
 
 

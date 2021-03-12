@@ -1,5 +1,5 @@
 import csv
-from utils import pascal_to_snake_case
+from .utils import pascal_to_snake_case
 import json
 
 
