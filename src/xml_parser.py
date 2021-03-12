@@ -2,8 +2,8 @@ from collections import defaultdict
 
 
 class XMLParser:
-    def __init__(self, xml_tree, heading):
-        self.__xml_tree = xml_tree
+    def __init__(self, xml_root, heading):
+        self.__xml_root = xml_root
         self.__heading = heading
 
     def __append_to_neighbours(self, neighbours_dict, member_dict):
@@ -22,7 +22,7 @@ class XMLParser:
         # Parse XML tree to dict[string : dict || list]
         # Inspired from: https://stackoverflow.com/a/10076823/13089670
         children_dect = defaultdict(list)
-        for child in tree.getchildren():
+        for child in list(tree):
             current_child_dict = self.__convert_tree_to_dict(child)
             self.__append_to_neighbours(children_dect, current_child_dict)
 
@@ -38,8 +38,7 @@ class XMLParser:
         return xml_dict
 
     def parse(self):
-        root = self.__xml_tree.getroot()
-        xml_dict = self.__convert_tree_to_dict(root)
+        xml_dict = self.__convert_tree_to_dict(self.__xml_root)
         xml_dict["file_name"] = f"xml/{self.__heading}"
         print(xml_dict)
         return xml_dict
