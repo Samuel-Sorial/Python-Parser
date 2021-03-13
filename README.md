@@ -81,15 +81,15 @@ The application is very simple, which means that initializing it won't be a big 
 
 1. Clone the repo
 
-   ```sh
-   git clone https://github.com/Samuel-Sorial/Python-Parser.git
-   ```
+```sh
+git clone https://github.com/Samuel-Sorial/Python-Parser.git
+```
 
 2. Go to the clone directory
 
-   ```sh
-    cd Python-Parser
-   ```
+```sh
+cd Python-Parser
+```
 
    <!-- Testing -->
 
@@ -100,8 +100,10 @@ The application is very simple, which means that initializing it won't be a big 
 After initializing the project from the previous section, simply run:
 
 ```sh
-python -m unittest discover test
+python3 -m unittest discover test
 ```
+
+**Note:** if your default python version is python3, you can only type python instead of python3
 
 ---
 
@@ -114,7 +116,7 @@ python -m unittest discover test
 ### Parse to json
 
 ```sh
-python parser.py <format> <files>
+python3 parser.py <format> <files>
 ```
 
 - Supported formats are:
@@ -125,7 +127,7 @@ python parser.py <format> <files>
 **Sample xml usage:**
 
 ```sh
- python parser.py xml ./data/xml/customer1.xml
+python3 parser.py xml ./data/xml/customer1.xml
 ```
 
 **Sample xml output:** `customer.json` file that contains:
@@ -157,7 +159,7 @@ python parser.py <format> <files>
 **Sample csv usage:**
 
 ```sh
- python parser.py csv ./data/csv/vehicles.csv
+python3 parser.py csv ./data/csv/vehicles.csv
 ```
 
 **Sample xml output:** `vehicles.json` file that contains:
