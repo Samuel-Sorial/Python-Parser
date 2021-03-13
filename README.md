@@ -75,7 +75,7 @@ The application is very simple, which means that initializing it won't be a big 
 
 ### Prerequisites
 
-- Python
+- Python3
 
 ### Installation
 
