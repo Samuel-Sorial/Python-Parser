@@ -59,7 +59,7 @@
 
 ## About The Project
 
-A simple parser built using python as part of a hiring process. It supports parser data from CSV & XML to JSON. The project was built in a way that makes it easy to extend to new format, and easy to add new features.
+A simple parser built using python as part of a hiring process. It supports parser data from CSV & XML to JSON. The project was built in a way that makes it easy to extend to a new format, and easy to add new features. I've decided to only use built-in modules in my task, as I wanted to show my algorithmic skills (especially in the XML Parser) alongside my software engineering skills.
 
 ### Built With
 
